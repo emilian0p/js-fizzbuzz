@@ -16,15 +16,20 @@ for (let index = 1; index <= 100 ; index++) {
     numberRowBox.innerHTML = index;
 
     numberRow.append(numberRowBox);
-    
+/*     
     let sommaTre = 3;
 
     let sommaCinque = 5;
-
-    if (index == sommaTre) {
+ */
+    if (index % 3 == 0) {
         console.log('fizz')
-    } else if (index == sommaCinque) {
+    } else if (index % 5 == 0) {
         console.log('buzz')
+    } if (index % 15 == 0) {
+        console.log('fizzbuzz')
+    } else {
+        console.log(index)
     }
-    console.log(index)
+   
+
 }
