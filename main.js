@@ -5,9 +5,21 @@ fizz 3 buzz 5 fizzbuzz 15
 -imposto degli if nel ciclo per visualizzare fizz buzz e fizzbuzz
 -stampo in console
  */
+
 const numberRow = document.getElementById('number');
 
+
 for (let index = 1; index <= 100 ; index++) {
+
+    if (index % 15 == 0) {
+        console.log('fizzbuzz')
+    } else if (index % 3 == 0) {
+        console.log('fizz')
+    } else if (index % 5 == 0) {
+        console.log('buzz')
+    } else {
+        console.log(index)
+        }
 
     const numberRowBox = document.createElement('div');
 
@@ -16,20 +28,8 @@ for (let index = 1; index <= 100 ; index++) {
     numberRowBox.innerHTML = index;
 
     numberRow.append(numberRowBox);
-/*     
-    let sommaTre = 3;
 
-    let sommaCinque = 5;
- */
-    if (index % 3 == 0) {
-        console.log('fizz')
-    } else if (index % 5 == 0) {
-        console.log('buzz')
-    } if (index % 15 == 0) {
-        console.log('fizzbuzz')
-    } else {
-        console.log(index)
-    }
-   
 
 }
+
+
