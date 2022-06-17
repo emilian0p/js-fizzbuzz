@@ -11,21 +11,32 @@ const numberRow = document.getElementById('number');
 
 for (let index = 1; index <= 100 ; index++) {
 
-    if (index % 15 == 0) {
-        console.log('fizzbuzz')
-    } else if (index % 3 == 0) {
-        console.log('fizz')
-    } else if (index % 5 == 0) {
-        console.log('buzz')
-    } else {
-        console.log(index)
-        }
-
     const numberRowBox = document.createElement('div');
-
     numberRowBox.classList.add('box','col-2');
 
-    numberRowBox.innerHTML = index;
+
+    if (index % 15 == 0) {
+        numberRowBox.innerHTML = 'Fizzbuzz';
+        console.log('fizzbuzz');
+        
+    } else if (index % 3 == 0) {
+        numberRowBox.innerHTML = 'fizz';
+        console.log('fizz');
+        
+    } else if (index % 5 == 0) {
+        numberRowBox.innerHTML = 'buzz';
+        console.log('buzz');
+       
+    } else {
+        numberRowBox.innerHTML = index;
+        console.log(index);
+        }
+
+    
+
+   
+
+    
 
     numberRow.append(numberRowBox);
 
